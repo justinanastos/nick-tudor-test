@@ -1,0 +1,15 @@
+.gae.auth
+/node_modules
+*.map
+/web/vendor
+/tmp
+*.min.js
+/web/css/main.css
+.sass-cache
+livereload.js
+/web/build
+*.pyc
+*.pyo
+/vendor
+/application/templates/svgs.html
+/web/docs

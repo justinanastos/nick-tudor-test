@@ -1,0 +1,44 @@
+config:
+    liveReloadPort: 35731
+    files:
+        js:
+            app:
+                src:
+                  - Gruntfile.js
+                  - web/js/require-main.js
+                  - web/js/app.js
+                  - web/js/apps/**/*.js
+                  - web/js/components/**/*.js
+                  - web/js/data/**/*.js
+                  - web/js/entities/**/*.js
+                  - web/js/mixins/**/*.js
+            livereload: web/js/livereload.js
+        groc:
+            dest: web/docs
+        handlebars:
+            src:
+                - web/js/**/*.html
+            dest: web/js/precompiled.handlebars.js
+        scss:
+            loadPaths:
+              - web/css
+              - web/css/site
+              - web/vendor
+              - web/vendor/bootstrap-sass-official/vendor/assets/stylesheets/bootstrap
+              - web/vendor/bourbon/dist
+            app:
+                src:
+                  - web/css/application.scss
+                dest: web/css/main.css
+            watch: web/css/**/*.scss
+        svgstore:
+            src:
+                - web/svg/*.svg
+            dest: application/templates/svgs.html
+    requirejs:
+        appDir: ./web/js
+        baseUrl: ./
+        dir: ./web/build
+        mainConfigFile: ./web/js/require-main.js
+        modules:
+            - name: require-main

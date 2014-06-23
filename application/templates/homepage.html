@@ -1,0 +1,14 @@
+{% extends "layouts/base.html" %}
+
+{% block body %}
+    {% include 'svgs.html' %}
+    <!-- App Regions -->
+
+    <!-- /App Regions -->
+    {% if config['ENV'] == 'DEV' %}
+    <script src="/js/livereload.js"></script>
+    <script async data-main="/js/require-main.js" src="/vendor/requirejs/require.js"></script>
+    {% else %}
+    <script async data-main="/build/require-main.js" src="/vendor/requirejs/require.js"></script>
+    {% endif %}
+{% endblock %}
