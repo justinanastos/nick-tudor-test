@@ -7,6 +7,7 @@ base-marionette
 npm install
 bower install
 sudo pip install Pygments
+pip install -r requirements.txt -t vendor/
 grunt
 ```
 
