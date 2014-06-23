@@ -20,7 +20,7 @@
             Handlebars: '../vendor/handlebars/handlebars',
             hbars: '../vendor/requirejs-handlebars/hbars',
             jquery: '../vendor/jquery/dist/jquery',
-            marionette: '../vendor/backbone.marionette/lib/core/amd/backbone.marionette',
+            marionette: '../vendor/backbone.marionette/lib/core/backbone.marionette',
             'marionette-transitions': '../vendor/marionette-transitions/marionette-transitions',
             modernizr: '../vendor/modernizr/modernizr',
             text: '../vendor/requirejs-text/text',

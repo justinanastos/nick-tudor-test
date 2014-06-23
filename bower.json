@@ -7,7 +7,7 @@
     "backbone-computedfields": "~0.0.7",
     "backbone-relational": "PaulUithol/Backbone-relational#~0.8.8",
     "Backbone.GroupedCollection": "UseAllFive/Backbone.GroupedCollection#master",
-    "backbone.marionette": "~1.8.4",
+    "backbone.marionette": "~2.0.1",
     "Backbone.VirtualCollection": "p3drosola/Backbone.VirtualCollection#~0.5.0",
     "bootstrap-sass-official": "~3.1",
     "bourbon": "~4.0.1",
