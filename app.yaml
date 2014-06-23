@@ -1,0 +1,53 @@
+application: app
+version: 1
+runtime: python27
+api_version: 1
+threadsafe: yes
+default_expiration: 1h
+
+builtins:
+- appstats: on
+- admin_redirect: on
+- deferred: on
+- remote_api: on
+
+libraries:
+- name: jinja2
+  version: "2.6"
+- name: markupsafe
+  version: "0.15"
+
+inbound_services:
+- warmup
+
+handlers:
+- url: /build
+  static_dir: web/build
+
+- url: /css
+  static_dir: web/css
+
+- url: /js
+  static_dir: web/js
+
+- url: /img
+  static_dir: web/img
+
+- url: /vendor
+  static_dir: web/vendor
+
+- url: /videos
+  static_dir: web/videos
+
+- url: /svg
+  static_dir: web/svg
+
+- url: /docs
+  static_dir: web/docs
+
+- url: .*
+  script: run.application.app
+
+skip_files:
+- ^node_modules/.*
+- ^.git/.*
