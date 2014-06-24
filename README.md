@@ -41,16 +41,6 @@ Prior to running the deploy command the person running the deploy will need to r
 
 `git remote add code.google.com https://code.google.com/a/google.com/p/gweb-artcopycode/`
 
-### Add Google App Engine Authentication file:
-Execute the following in your project's root directory
-
-```shell
-#-- NOTE: the -n here is very important, a new line at the end of
-#   this file will prevent the grunt task from being able to parse
-#   this file
-echo -n 'username@useallfive.com p455w0rd' > .gae.auth
-```
-
 ## Push process
 ### Get latest development into master
 1. Checkout development and pull latest changes `git checkout development; git pull -r`
