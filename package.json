@@ -31,7 +31,6 @@
     "jshint": "~2.5.0",
     "matchdep": "^0.3.0",
     "node-phantom": "~0.2.5",
-    "requirejs-handlebars": "git://github.com/webpro/requirejs-handlebars",
     "underscore": "^1.6.0",
     "semver": "~2.3.0"
   },
