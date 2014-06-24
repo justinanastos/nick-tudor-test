@@ -70,9 +70,6 @@ module.exports = function(grunt) {
             },
             'delete-python-vendor-directory': {
                 command: 'rm -rf vendor/'
-            },
-            'push-google-remote': {
-                command: 'git push code.google.com master'
             }
         },
         gae: {
@@ -374,8 +371,7 @@ module.exports = function(grunt) {
             'prompt:bump',
             'bump:prompt'
         ].concat(
-            deployTasks,
-            'exec:push-google-remote'
+            deployTasks
         )
     );
 
