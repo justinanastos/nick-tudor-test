@@ -8,10 +8,9 @@ define([
     // Require.js modules we need included, but don't directly access.
     'appExtensions/facebook',
     'appExtensions/locationOrigin',
-    'appExtensions/marionetteRegionViewCloseEvent',
     'appExtensions/handlebarsPartials',
-    'appExtensions/handlebarsRender',
-    'appExtensions/marionette.googleAnalytics',
+    'marionette.babyBird',
+    'marionette.regionChildCloseEvent',
     'marionette-transitions',
     'backbone.grouped-collection',
     'backbone.virtual-collection',

@@ -21,6 +21,8 @@
             hbars: '../vendor/requirejs-handlebars/hbars',
             jquery: '../vendor/jquery/dist/jquery',
             marionette: '../vendor/backbone.marionette/lib/core/backbone.marionette',
+            'marionette.babyBird': '../vendor/marionette.babyBird/lib/marionette.babyBird',
+            'marionette.regionChildCloseEvent': '../vendor/marionette.regionChildCloseEvent/lib/marionette.regionChildCloseEvent',
             'marionette-transitions': '../vendor/marionette-transitions/marionette-transitions',
             modernizr: '../vendor/modernizr/modernizr',
             text: '../vendor/requirejs-text/text',

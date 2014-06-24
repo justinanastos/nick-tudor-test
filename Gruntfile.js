@@ -88,7 +88,6 @@ module.exports = function(grunt) {
             options: {
                 index: 'index.html',
                 out: config.files.groc.dest,
-                silent: true,
                 strip: 'web/js'
             }
         },
