@@ -7,14 +7,14 @@ define([
     'Handlebars',
     // Require.js modules we need included, but don't directly access.
     'appExtensions/facebook',
-    'appExtensions/locationOrigin',
     'appExtensions/handlebarsPartials',
     'marionette.babyBird',
     'marionette.regionChildCloseEvent',
     'marionette-transitions',
     'backbone.grouped-collection',
     'backbone.virtual-collection',
-    'backbone-super'
+    'backbone-super',
+    'polyfillLocationOrigin'
 ], function(Marionette, Backbone, _, data, Handlebars) {
     // Start up a new Marionette Application
     var App = new Marionette.Application();
