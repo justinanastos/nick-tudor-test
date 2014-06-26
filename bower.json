@@ -15,8 +15,6 @@
     "facebook": "https://connect.facebook.net/en_US/sdk.js",
     "handlebars": "~1.3.0",
     "jquery": "~2.1.1",
-    "marionette.babyBird": "git@github.com:UseAllFive/marionette.babyBird.git#~0.1.1",
-    "marionette.regionChildCloseEvent": "git@github.com:UseAllFive/marionette.regionChildCloseEvent.git#~0.0.1",
     "modernizr": "~2.8.1",
     "normalize-css": "~3.0.1",
     "requirejs": "2.1.11",
@@ -27,6 +25,8 @@
     "underscore.string": "~2.3.3",
     "marionette-transitions": "marionette-transitions#0.0.11",
     "backbone-super": "~1.0.2",
-    "polyfillLocationOrigin": "~0.1.1"
+    "polyfillLocationOrigin": "~0.1.1",
+    "marionette.babyBird": "~0.1.4",
+    "marionette.regionChildCloseEvent": "~0.0.4"
   }
 }
