@@ -20,7 +20,8 @@ define([
     var App = new Marionette.Application();
     // Add regions
     App.addRegions({
-        // regionName: .className
+        // Example region
+        exampleRegion: '.exampleRegion'
     });
     // Fires after the Application has started and after the initializers
     // have been executed.
@@ -28,7 +29,8 @@ define([
         // Start the history. All subapps must be loaded prior, or any routing
         // inside of them will not work.
         require([
-            // apps/...
+            // Example app
+            'apps/example/exampleApp'
         ], function() {
             if (Backbone.history) {
                 Backbone.history.start({
@@ -48,9 +50,9 @@ define([
     // Initializer callback. Fires when the application has started.
     App.addInitializer(function(options) {
         // Start apps
-        // require(['...'], function() {
-            // App.module('...').start();
-        // });
+        require(['apps/example/exampleApp'], function() {
+            App.module('ExampleApp').start();
+        });
         // Remove 300ms delay on mobile clicks.
         require(['fastclick'], function(fastClick) {
             fastClick.attach(document.body);
