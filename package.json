@@ -32,7 +32,8 @@
     "matchdep": "^0.3.0",
     "node-phantom": "~0.2.5",
     "underscore": "^1.6.0",
-    "semver": "~2.3.0"
+    "semver": "~2.3.0",
+    "ua5-frontend-standards": "~0.0.2"
   },
   "dependencies": {
     "grunt-contrib-symlink": "^0.3.0"
