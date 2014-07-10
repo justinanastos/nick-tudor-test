@@ -2,8 +2,11 @@
 
 {% block body %}
     {% include 'svgs.html' %}
-    <!-- Example region -->
-    <div class="exampleRegion"></div>
+
+    <!-- Regions -->
+    <div class="example-region"></div>
+    <!-- /Regions -->
+
     {% if config['ENV'] == 'DEV' %}
     <script src="/js/livereload.js"></script>
     <script async data-main="/js/require-main.js" src="/vendor/requirejs/require.js"></script>

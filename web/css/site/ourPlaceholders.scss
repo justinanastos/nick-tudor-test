@@ -1,19 +1,19 @@
-%alignVertically {
+%align-vertically {
     @include position(absolute, 50% null null null);
     @include transform(translateY(-50%));
 }
 
-%alignHorizontally {
+%align-horizontally {
     @include position(absolute, null null null 50%);
     @include transform(translateX(-50%));
 }
 
-%alignAll {
+%align-all {
     @include position(absolute, 50% null null 50%);
     @include transform(translate(-50%, -50%));
 }
 
-%listUnstyled {
+%list-unstyled {
     list-style: none;
     margin: 0;
     padding-left: 0;

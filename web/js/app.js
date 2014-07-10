@@ -20,8 +20,7 @@ define([
     var App = new Marionette.Application();
     // Add regions
     App.addRegions({
-        // Example region
-        exampleRegion: '.exampleRegion'
+        exampleRegion: '.example-region'
     });
     // Fires after the Application has started and after the initializers
     // have been executed.

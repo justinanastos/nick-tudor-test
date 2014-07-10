@@ -28,7 +28,7 @@ module.exports = function(grunt) {
     pkg = grunt.file.readJSON('package.json');
     config = grunt.file.readYAML('config/grunt.yml').config;
     urls = grunt.file.readJSON('config/urls.json');
-    isDevTasks = ! (_.contains(grunt.cli.tasks, 'deploy') || _.contains(grunt.cli.tasks, 'prod'));
+    isDevTasks = !(_.contains(grunt.cli.tasks, 'deploy') || _.contains(grunt.cli.tasks, 'prod'));
 
     // If this is the `dev-lint` task, then assign javascript files to be
     // watched.
@@ -39,7 +39,6 @@ module.exports = function(grunt) {
         watchRequireFiles.dest.push('web/build/require-main.js');
         watchRequireFiles.src = config.files.js.app.src;
     }
-
 
     //-- version must match '^(?:^(?!-)[a-z\d\-]{0,62}[a-z\d]$)$'
     function sanitizeVersion(dirtyVersion) {
@@ -238,6 +237,14 @@ module.exports = function(grunt) {
                 dest: config.files.scss.app.dest
             }
         },
+        scsslint: {
+            allFiles: config.files.scss.watch,
+            options: {
+                bundleExec: false,
+                config: '.scss-lint.yml',
+                colorizeOutput: true
+            }
+        },
         svgstore: {
             options: {
                 prefix: 'shape-',
@@ -357,7 +364,7 @@ module.exports = function(grunt) {
      */
     grunt.registerTask('bump:prompt', function() {
         var increment = grunt.config('bump.increment');
-        if (! increment) {
+        if (!increment) {
             grunt.fatal('bump.increment config not set!');
         }
 
@@ -375,6 +382,6 @@ module.exports = function(grunt) {
     );
 
     // Register task for validating code.
-    grunt.registerTask('validate-code', ['jshint:inline', 'jscs:inline']);
+    grunt.registerTask('validate-code', ['jshint:inline', 'jscs:inline', 'scsslint']);
     grunt.registerTask('test', ['validate-code']);
 };
