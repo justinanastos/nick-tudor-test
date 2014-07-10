@@ -25,6 +25,7 @@
     "grunt-open": "~0.2.3",
     "grunt-preprocess": "~4.0.0",
     "grunt-prompt": "~1.1.0",
+    "grunt-scss-lint": "^0.1.12",
     "grunt-svgstore": "0.0.4",
     "grunt-phantom-crawler": "git://github.com/UseAllFive/grunt-phantom-crawler#v0.0.1",
     "jscs": "1.4.3",

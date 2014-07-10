@@ -237,6 +237,14 @@ module.exports = function(grunt) {
                 dest: config.files.scss.app.dest
             }
         },
+        scsslint: {
+            allFiles: config.files.scss.watch,
+            options: {
+                bundleExec: false,
+                config: '.scss-lint.yml',
+                colorizeOutput: true
+            }
+        },
         svgstore: {
             options: {
                 prefix: 'shape-',
@@ -374,6 +382,6 @@ module.exports = function(grunt) {
     );
 
     // Register task for validating code.
-    grunt.registerTask('validate-code', ['jshint:inline', 'jscs:inline']);
+    grunt.registerTask('validate-code', ['jshint:inline', 'jscs:inline', 'scsslint']);
     grunt.registerTask('test', ['validate-code']);
 };
