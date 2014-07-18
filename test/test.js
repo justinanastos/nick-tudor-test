@@ -3,8 +3,8 @@
 
 var assert = require('assert');
 
-var webdriver = require('selenium-webdriver');
-var test = require('selenium-webdriver/testing');
+var webdriver = require('browserstack-webdriver');
+var test = require('browserstack-webdriver/testing');
 
 test.describe('Base Marionette', function() {
     var driver;
