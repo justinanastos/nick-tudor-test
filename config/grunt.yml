@@ -1,6 +1,8 @@
 config:
     liveReloadPort: 35731
     files:
+        img:
+            src: web/img/**/*.{png,jpg,gif}
         js:
             app:
                 src:

@@ -49,6 +49,16 @@ module.exports = function(grunt) {
         pkg: pkg,
         sanitizeVersion: sanitizeVersion,
         semver: require('semver'),
+        imagemin: {
+            build: {
+                files: [{
+                    expand: true,
+                    src: [config.files.img.src],
+                    // Just replace the file
+                    dest: '.'
+                }]
+            }
+        },
         bump: {
             options: {
                 commitFiles: [ //-- Files to add to release commit
@@ -267,6 +277,10 @@ module.exports = function(grunt) {
             }
         },
         watch: {
+            imagemin: {
+                files: config.files.img.src,
+                tasks: 'newer:imagemin:build'
+            },
             js: {
                 files: watchJavascriptFiles,
                 tasks: ['jshint:inline', 'jscs:inline', 'groc']
@@ -326,6 +340,7 @@ module.exports = function(grunt) {
         'symlink:pre-commit-hook',
         'sass',
         'svgstore',
+        'newer:imagemin:build',
         'prepare_livereload',
         'watch'
     ];
