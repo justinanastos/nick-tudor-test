@@ -74,7 +74,7 @@ Master will now be ahead of development because of the merge commit. Development
     * I've aliased this by adding something like this to my .bashrc
         * ```alias testproxy='~/installs/BrowserStackLocal -v ry7rcSN4xspxxpqDh9zK localhost,12080,0'```
     * Make sure to replace my API key for your own in that command as well
-- In app root run ```mocha test```
+- In app root run ```mocha -R spec test```
 - Notes:
     * Useful selenium examples: https://code.google.com/p/selenium/wiki/WebDriverJs
     * Initial test only set up to run on firefox but we'll change that

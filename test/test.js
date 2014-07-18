@@ -3,8 +3,8 @@
 
 var assert = require('assert');
 
-var webdriver = require('browserstack-webdriver');
-var test = require('browserstack-webdriver/testing');
+var webdriver = require('selenium-webdriver');
+var test = require('selenium-webdriver/testing');
 
 test.describe('Base Marionette', function() {
     var driver;
@@ -27,9 +27,12 @@ test.describe('Base Marionette', function() {
         var url = 'http://localhost:12080';
         driver.get(url);
         driver.wait(function() {
-            console.log('Server response received from', url);
-            driver.findElement(webdriver.By.className('example-region')).then(function(elements) {
-                console.log(elements);
+            return driver.findElement(webdriver.By.className('example-region')).then(function(elements) {
+                // If control flow enters this callback, the region is found
+                return true;
+            }, function(err) {
+                // If control flow enters this error callback, region wasnt found ... force test to fail
+                return false;
             });
         }, 1000);
     });
