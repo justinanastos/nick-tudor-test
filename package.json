@@ -6,6 +6,7 @@
   },
   "version": "0.0.1",
   "devDependencies": {
+    "browserstack-webdriver": "2.41.1",
     "chalk": "^0.4.0",
     "groc": "^0.6.3",
     "grunt": "^0.4.4",
