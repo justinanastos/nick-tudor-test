@@ -60,6 +60,27 @@ Master will now be ahead of development because of the merge commit. Development
 1. Checkout development and rebase off of master `git checkout development; git rebase master`
 2. Push development `git push origin development`
 
+## Testing
+### Set up BrowserStack
+- Export BrowserStack creds as env variables ... for example in my bashrc I have:
+    * ```export BROWSERSTACK_USER=travisglines1```
+    * ```export BROWSERSTACK_KEY=ry7rcSN4xspxxpqDh9zK```
+- Install mocha globally - this will give you the mocha command
+    * ```npm install -g mocha```
+    * Exposes globals like describe inside you test javascript 
+- Download the proxy executable and unpack it somewhere in your path or know where to get it from
+    * Download from: https://www.browserstack.com/local-testing#command-line
+- Set your username and access key and replace in test file
+    * Can get it from top left here: https://www.browserstack.com/automate
+- Run the proxy executable and keep it running in seperate terminal session
+    * For example I do: ```~/installs/BrowserStackLocal -v $BROWSERSTACK_KEY localhost,12080,0```
+    * I've aliased this by adding something like this to my .bashrc
+        * ```alias testproxy='~/installs/BrowserStackLocal -v $BROWSERSTACK_KEY localhost,12080,0'```
+- In app root run ```mocha -R spec test```
+- Notes:
+    * Useful selenium examples: https://code.google.com/p/selenium/wiki/WebDriverJs
+    * Initial test only set up to run on firefox but we'll change that
+
 ## Code Standards
 ### Sublime Settings
 The JavaScript linting for this project requires [Sublime Text 3](http://www.sublimetext.com/3).
