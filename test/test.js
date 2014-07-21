@@ -23,9 +23,9 @@ test.describe('Base Marionette', function() {
             withCapabilities(capabilities).
             build();
     });
-    
+
     test.it('Should find the example region rendered on the page', function() {
-        var url = 'http://localhost:12080';
+        var url = 'http://localhost:' + process.env.BROWSERSTACK_PORT;
         driver.get(url);
         driver.wait(function() {
             return driver.findElement(webdriver.By.className('example-region')).then(function(elements) {
@@ -38,7 +38,7 @@ test.describe('Base Marionette', function() {
         }, 1000);
     });
 
-    test.after(function() { 
+    test.after(function() {
         driver.quit();
     });
 });
