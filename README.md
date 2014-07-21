@@ -65,9 +65,10 @@ Master will now be ahead of development because of the merge commit. Development
 - Export BrowserStack creds as env variables ... for example in my bashrc I have:
     * ```export BROWSERSTACK_USER=travisglines1```
     * ```export BROWSERSTACK_KEY=ry7rcSN4xspxxpqDh9zK```
+    * ```export BROWSERSTACK_PORT=12080```
 - Install mocha globally - this will give you the mocha command
     * ```npm install -g mocha```
-    * Exposes globals like describe inside you test javascript 
+    * Exposes globals like describe inside you test javascript
 - Download the proxy executable and unpack it somewhere in your path or know where to get it from
     * Download from: https://www.browserstack.com/local-testing#command-line
 - Set your username and access key and replace in test file
