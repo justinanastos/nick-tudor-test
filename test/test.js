@@ -13,9 +13,10 @@ test.describe('Base Marionette', function() {
         var capabilities = {
              'browserstack.local': 'true',
              browserName: 'firefox',
-             // Replace the following two fields with your browserstack user/key
-             'browserstack.user': 'travisglines1',
-             'browserstack.key': 'ry7rcSN4xspxxpqDh9zK'
+             // Export BROWSERSTACK_USER and BROWSERSTACK_KEY in your bashrc
+             // See readme for example
+             'browserstack.user': process.env.BROWSERSTACK_USER,
+             'browserstack.key': process.env.BROWSERSTACK_KEY
          };
         driver = new webdriver.Builder().
             usingServer('http://hub.browserstack.com/wd/hub').
