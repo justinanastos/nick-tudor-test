@@ -40,6 +40,11 @@ define([
                     pushState: true
                 });
             }
+
+            // Start all apps that were not automatically started. Do this
+            // here and not in a separate initializer because there's no
+            // reason to require the apps twice in this file.
+            App.module('ExampleApp').start();
         });
     });
 
@@ -55,11 +60,6 @@ define([
 
     // Initializer callback. Fires when the application has started.
     App.addInitializer(function(options) {
-        // Start apps
-        require(['apps/example/exampleApp'], function() {
-            App.module('ExampleApp').start();
-        });
-
         // Remove 300ms delay on mobile clicks.
         require(['fastclick'], function(fastClick) {
             fastClick.attach(document.body);
