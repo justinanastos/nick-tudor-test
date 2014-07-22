@@ -1,4 +1,3 @@
-// Require that the application be included first.
 define([
     'app',
     'apps/example/exampleController'
@@ -9,7 +8,6 @@ define([
         // Create new router for example app
         ExampleApp.Router = new Marionette.AppRouter({
             appRoutes: {
-                // Match when navigating to the root call the `show()` method
                 '': 'show'
             },
             controller: {
@@ -32,6 +30,6 @@ define([
             ExampleApp.exampleController.show();
         });
     });
-    // It's best practice to return the ExampleApp
+
     return App.ExampleApp;
 });
