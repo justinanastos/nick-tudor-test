@@ -34,7 +34,7 @@
     "matchdep": "^0.3.0",
     "node-phantom": "~0.2.5",
     "semver": "~2.3.0",
-    "ua5-frontend-standards": "~0.0.2",
+    "ua5-frontend-standards": "^0.0.4",
     "underscore": "^1.6.0",
     "grunt-contrib-imagemin": "~0.7.1",
     "grunt-newer": "~0.7.0",
