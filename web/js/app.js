@@ -15,7 +15,8 @@ define([
     'backbone.grouped-collection',
     'backbone.virtual-collection',
     'backbone-super',
-    'polyfillLocationOrigin'
+    'polyfillLocationOrigin',
+    'marionette.enhancedController'
 ], function(Marionette, Backbone, _, data, Handlebars) {
     // Start up a new Marionette Application
     var App = new Marionette.Application();
