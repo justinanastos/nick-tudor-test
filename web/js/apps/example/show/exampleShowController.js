@@ -1,8 +1,8 @@
 define([
     'app',
-    'apps/example/exampleView'
+    'apps/example/show/exampleShowView'
 ], function(App, View) {
-    App.module('ExampleApp', function(ExampleApp, App, Backbone, Marionette, $, _) {
+    App.module('ExampleApp.Show', function(ExampleApp, App, Backbone, Marionette, $, _) {
 
         ExampleApp.Controller = Marionette.Controller.extend({
             initialize: function() {
@@ -44,5 +44,5 @@ define([
         });
     });
 
-    return App.ExampleApp.Controller;
+    return App.ExampleApp.Show.Controller;
 });

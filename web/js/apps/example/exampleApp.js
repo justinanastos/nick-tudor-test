@@ -1,6 +1,6 @@
 define([
     'app',
-    'apps/example/exampleController'
+    'apps/example/show/exampleShowController'
 ], function(App, Controller) {
     App.module('ExampleApp', function(ExampleApp, App, Backbone, Marionette, $, _) {
         var API;
@@ -16,7 +16,7 @@ define([
 
         API = {
             show: function() {
-                new ExampleApp.Controller({
+                new ExampleApp.Show.Controller({
                     region: App.exampleRegion
                 });
 

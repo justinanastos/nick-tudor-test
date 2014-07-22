@@ -1,9 +1,9 @@
 define([
     'app',
-    'hbars!apps/example/templates/exampleLayout',
-    'hbars!apps/example/templates/exampleItem'
+    'hbars!apps/example/show/templates/exampleLayout',
+    'hbars!apps/example/show/templates/exampleItem'
 ], function(App, layoutTemplate, itemTemplate) {
-    App.module('ExampleApp.View', function(View, App, Backbone, Marionette, $, _) {
+    App.module('ExampleApp.Show.View', function(View, App, Backbone, Marionette, $, _) {
 
         View.Layout = Marionette.LayoutView.extend({
             regions: {
@@ -20,5 +20,5 @@ define([
         });
     });
 
-    return App.ExampleApp.View;
+    return App.ExampleApp.Show.View;
 });
