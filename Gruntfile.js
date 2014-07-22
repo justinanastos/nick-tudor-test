@@ -293,7 +293,11 @@ module.exports = function(grunt) {
                 options: {
                     livereload: config.liveReloadPort
                 },
-                files: ['web/css/main.css'].concat(watchRequireFiles.dest)
+                files: [].concat(
+                    'web/css/main.css',
+                    config.files.js.app.src,
+                    config.files.handlebars.src
+                )
             },
             require: {
                 options: {
