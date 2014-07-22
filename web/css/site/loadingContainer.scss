@@ -1,0 +1,11 @@
+.loading-container {
+    min-height: 200px;
+    position: relative;
+    width: 100%;
+
+    > .spinner {
+        left: 50% !important;
+        position: absolute !important;
+        top: 50% !important;
+    }
+}
