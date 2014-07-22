@@ -18,9 +18,7 @@ config:
         groc:
             dest: web/docs
         handlebars:
-            src:
-                - web/js/**/*.html
-            dest: web/js/precompiled.handlebars.js
+            src: web/js/**/*.hbs
         scss:
             loadPaths:
               - web/css
