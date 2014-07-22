@@ -3,31 +3,38 @@ define([
     'apps/example/exampleController'
 ], function(App, Controller) {
     App.module('ExampleApp', function(ExampleApp, App, Backbone, Marionette, $, _) {
+        var API;
+
         // Do not start automatically
         this.startWithParent = false;
-        // Create new router for example app
-        ExampleApp.Router = new Marionette.AppRouter({
+
+        ExampleApp.Router = Marionette.AppRouter.extend({
             appRoutes: {
                 '': 'show'
-            },
-            controller: {
-                show: function() {
-                    // Execute the `example:show` command
-                    App.execute('example:show');
-                }
             }
         });
-        // Respond to the `example:show` command
-        App.commands.setHandler('example:show', function() {
-            // If ExampleApp.exampleController is `undefined`, create a new
-            // instance of the exampleController
-            if (_.isUndefined(ExampleApp.exampleController)) {
-                ExampleApp.exampleController = new Controller();
+
+        API = {
+            show: function() {
+                new ExampleApp.Controller({
+                    region: App.exampleRegion
+                });
+
+                // Notify application
+                App.trigger('example:show');
             }
-            // Change the URL to the root
+        };
+
+        App.addInitializer(function() {
+            new ExampleApp.Router({
+                controller: API
+            });
+        });
+
+        App.commands.setHandler('example:show', function() {
             App.navigate('');
-            // Call `show()` on the exampleController
-            ExampleApp.exampleController.show();
+
+            API.show();
         });
     });
 
