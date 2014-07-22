@@ -1,5 +1,5 @@
 config:
-    liveReloadPort: 35731
+    liveReloadPort: 35740
     files:
         img:
             src: web/img/**/*.{png,jpg,gif}
