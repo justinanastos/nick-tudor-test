@@ -26,7 +26,11 @@
     "marionette-transitions": "marionette-transitions#0.0.11",
     "backbone-super": "~1.0.2",
     "polyfillLocationOrigin": "~0.1.1",
-    "marionette.babyBird": "~0.1.4",
-    "marionette.regionChildCloseEvent": "~0.0.4"
+    "marionette.babyBird": "^0.4.0",
+    "marionette.regionChildCloseEvent": "~0.0.4",
+    "marionette.enhancedController": "^1.0.3"
+  },
+  "resolutions": {
+    "jquery": "~2.1.1"
   }
 }
