@@ -9,9 +9,11 @@ define([
             // Define regions for the layout. These regions need to exist in
             // the DOM
             regions: {
-                body: '.body'
+                bodyRegion: '.body-region'
             },
-            // Use the layoutTemplate
+
+            className: 'example-app',
+
             template: layoutTemplate
         });
         // Extend the Marionette ItemView
