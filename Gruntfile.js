@@ -289,15 +289,15 @@ module.exports = function(grunt) {
                 files: watchJavascriptFiles,
                 tasks: ['jshint:inline', 'jscs:inline', 'groc']
             },
-            grunt: {
-                files: ['Gruntfile.*', 'config/grunt.yml', '.jscs.json', '.jshintrc'],
-                tasks: grunt.cli.tasks
-            },
             livereload: {
                 options: {
                     livereload: config.liveReloadPort
                 },
-                files: ['web/css/main.css'].concat(watchRequireFiles.dest)
+                files: [].concat(
+                    'web/css/main.css',
+                    config.files.js.app.src,
+                    config.files.handlebars.src
+                )
             },
             require: {
                 options: {

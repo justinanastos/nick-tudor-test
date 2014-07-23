@@ -1,5 +1,5 @@
 config:
-    liveReloadPort: 35731
+    liveReloadPort: 35740
     files:
         img:
             src: web/img/**/*.{png,jpg,gif}
@@ -18,9 +18,7 @@ config:
         groc:
             dest: web/docs
         handlebars:
-            src:
-                - web/js/**/*.html
-            dest: web/js/precompiled.handlebars.js
+            src: web/js/**/*.hbs
         scss:
             loadPaths:
               - web/css

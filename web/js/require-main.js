@@ -22,6 +22,7 @@
             jquery: '../vendor/jquery/dist/jquery',
             marionette: '../vendor/backbone.marionette/lib/core/backbone.marionette',
             'marionette.babyBird': '../vendor/marionette.babyBird/lib/marionette.babyBird',
+            'marionette.enhancedController': '../vendor/marionette.enhancedController/lib/marionette.enhancedController',
             'marionette.regionChildCloseEvent': '../vendor/marionette.regionChildCloseEvent/lib/marionette.regionChildCloseEvent',
             'marionette-transitions': '../vendor/marionette-transitions/marionette-transitions',
             modernizr: '../vendor/modernizr/modernizr',
