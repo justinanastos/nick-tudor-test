@@ -7,8 +7,8 @@ define([
     'Handlebars',
 
     // Require.js modules we need included, but don't directly access.
-    'appExtensions/facebook',
-    'appExtensions/handlebarsPartials',
+    'app_extensions/facebook',
+    'app_extensions/handlebars_partials',
     'marionette.babyBird',
     'marionette.regionChildCloseEvent',
     'marionette-transitions',
@@ -33,7 +33,7 @@ define([
         // inside of them will not work.
         require([
             // Example app
-            'apps/example/exampleApp'
+            'apps/example/example_app'
         ], function() {
             if (Backbone.history) {
                 Backbone.history.start({
