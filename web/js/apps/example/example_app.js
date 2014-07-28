@@ -1,6 +1,6 @@
 define([
     'app',
-    'apps/example/show/exampleShowController'
+    'apps/example/show/example_show_controller'
 ], function(App, Controller) {
     App.module('ExampleApp', function(ExampleApp, App, Backbone, Marionette, $, _) {
         var API;

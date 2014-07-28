@@ -1,6 +1,6 @@
 define([
     'app',
-    'apps/example/show/exampleShowView'
+    'apps/example/show/example_show_view'
 ], function(App, View) {
     App.module('ExampleApp.Show', function(ExampleApp, App, Backbone, Marionette, $, _) {
 
