@@ -1,0 +1,18 @@
+@mixin make-columns($columns) {
+    @include margin(null (-$grid-gutter-width));
+    overflow: hidden;
+
+    > * {
+        @include padding(null $grid-gutter-width);
+        float: left;
+        width: #{100/$columns}#{"%"};
+
+        &:nth-child(#{$columns}n + 1) {
+            clear: left;
+        }
+
+        &:not(:nth-child(#{$columns}n + 1)) {
+            clear: none;
+        }
+    }
+}
