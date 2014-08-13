@@ -4,7 +4,6 @@
 *.pyo
 .editorconfig
 .gae.auth
-.gitignore
 .jscsrc
 .jshintignore
 .jshintrc
