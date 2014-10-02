@@ -8,7 +8,7 @@
   "devDependencies": {
     "backbone.marionette": "^2.2.1",
     "chalk": "^0.4.0",
-    "groc": "^0.6.3",
+    "groc": "git://github.com/peterkc/groc#cb790718e648813fa568f70e1e3413b36d0871c9",
     "grunt": "^0.4.4",
     "grunt-contrib-imagemin": "~0.7.1",
     "grunt-contrib-jshint": "~0.10.0",

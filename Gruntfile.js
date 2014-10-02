@@ -85,8 +85,10 @@ module.exports = function(grunt) {
                 src: config.files.js.app.src
             },
             options: {
+                github: true,
                 index: 'index.html',
                 out: config.files.groc.dest,
+                silent: false,
                 strip: 'web/js'
             }
         },
