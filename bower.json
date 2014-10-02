@@ -18,12 +18,7 @@
     "underscore": "~1.6.0",
     "underscore.string": "~2.3.3",
     "marionette.babyBird": "^0.4.0",
-    "marionette.regionChildCloseEvent": "~0.0.4",
     "marionette.enhancedController": "^1.0.3",
     "handlebars-partials-with-parameters": "justinanastos/handlebars.partialsWithParameters#~1.0.5"
-  },
-  "resolutions": {
-    "jquery": "~2.1.1",
-    "backbone.marionette": "~2.2.1"
   }
 }
