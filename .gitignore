@@ -17,5 +17,7 @@
 /web/build
 /web/css/main.css
 /web/docs
+/web/index.html
 /web/vendor
 livereload.js
+secret.json

@@ -1,3 +1,4 @@
+//jshint camelcase: false
 var _;
 var matchdep;
 var chalk;
@@ -11,7 +12,6 @@ module.exports = function(grunt) {
 
     var config;
     var pkg;
-    var watchJavascriptFiles = [];
 
     pkg = grunt.file.readJSON('package.json');
     config = grunt.file.readYAML('config/grunt.yml').config;
@@ -25,6 +25,31 @@ module.exports = function(grunt) {
         pkg: pkg,
         sanitizeVersion: sanitizeVersion,
         semver: require('semver'),
+        secret: grunt.file.readJSON('secret.json'),
+
+        sftp: {
+            production: {
+                files: {
+                    './': [
+                        'web/vendor/requirejs/require.js',
+                        'web/css',
+                        'web/index.html',
+                        'web/build/require-main.js',
+                        'web/build/require-main.js.map'
+                    ]
+                },
+                options: {
+                    host: '<%= secret.host %>',
+                    username: '<%= secret.username %>',
+                    password: '<%= secret.password %>',
+                    port: '<%= secret.port %>',
+                    srcBasePath: 'web/',
+                    showProgress: true,
+                    path: '/home/jusana/nick-tudor-test',
+                    createDirectories: true
+                }
+            }
+        },
 
         imagemin: {
             build: {
@@ -34,6 +59,24 @@ module.exports = function(grunt) {
                     // Just replace the file
                     dest: '.'
                 }]
+            }
+        },
+
+        preprocess: {
+            production: {
+                files: {
+                    'web/index.html': 'web/index.template.html'
+                },
+                options: {
+                    context: {
+                        PRODUCTION: true
+                    }
+                }
+            },
+            dev: {
+                files: {
+                    'web/index.html': 'web/index.template.html'
+                }
             }
         },
 
@@ -155,10 +198,6 @@ module.exports = function(grunt) {
                 files: config.files.img.src,
                 tasks: 'newer:imagemin:build'
             },
-            js: {
-                files: watchJavascriptFiles,
-                tasks: ['jshint:inline', 'jscs:inline', 'groc']
-            },
             livereload: {
                 options: {
                     livereload: config.liveReloadPort
@@ -194,12 +233,20 @@ module.exports = function(grunt) {
 
     grunt.registerTask('dev', [
         'symlink:pre-commit-hook',
+        'preprocess:dev',
         'sass',
         'newer:imagemin:build',
         'prepare_livereload',
         'watch'
     ]);
     grunt.registerTask('default', 'dev');
+
+    grunt.registerTask('deploy', [
+        'sass',
+        'preprocess:production',
+        'requirejs:prod',
+        'sftp:production'
+    ]);
 
     // Register task for validating code.
     grunt.registerTask('validate-code', ['jshint:inline', 'jscs:inline', 'scsslint']);

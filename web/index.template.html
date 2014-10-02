@@ -9,15 +9,10 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="fragment" content="!">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <meta property="og:description" content="" />
-        <meta property="og:image" content="" />
-        <meta property="og:site_name" content=""/>
-        <meta property="og:title" content="" />
-        <meta property="og:url" content="" />
+
         <title></title>
         <link href="/vendor/normalize-css/normalize.css" rel="stylesheet" type="text/css">
         <link href="/css/main.css" rel="stylesheet" type="text/css">
-        <link rel="icon" type="image/png" href="/img/favicon.png">
         <script>
             // Google analytics here
         </script>
@@ -26,7 +21,14 @@
     <body>
         <div class="example-region"></div>
 
+        <!-- @ifdef PRODUCTION -->
+        <script async data-main="/build/require-main.js" src="/vendor/requirejs/require.js"></script>
+        <!-- @endif -->
+
+        <!-- @ifndef PRODUCTION -->
         <script src="/js/livereload.js"></script>
         <script async data-main="/js/require-main.js" src="/vendor/requirejs/require.js"></script>
+        <!-- @endif -->
+
     </body>
 </html>

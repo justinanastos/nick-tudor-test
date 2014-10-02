@@ -50,26 +50,12 @@ define([
         return Backbone.history.fragment;
     };
 
-    // Initializer callback. Fires when the application has started.
-    App.addInitializer(function(options) {
-        // Remove 300ms delay on mobile clicks.
-        require(['fastclick'], function(fastClick) {
-            fastClick.attach(document.body);
-        });
-    });
-
     // Handlbar helpers
     require(['Handlebars'], function(Handlebars) {
         // Allow logging in handlebar templates
         // ex: {{ log this }}
         Handlebars.registerHelper('log', function(context) {
             return window.console.log(context);
-        });
-
-        // URL encode strings in handlebar templates
-        // ex: {{ urlencode string }}
-        Handlebars.registerHelper('urlencode', function(context) {
-            return encodeURIComponent(context);
         });
     });
 

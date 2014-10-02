@@ -15,7 +15,7 @@ define([
                 // Create the view model and bind it's events.
                 this.viewModel = new Backbone.Model({
                     page: 0,
-                    carouselData: this.carouselData
+                    carouselData: this.carouselData.clone()
                 });
                 this.listenTo(this.viewModel, 'change:page', this.onChangePage);
 
