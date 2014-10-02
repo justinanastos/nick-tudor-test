@@ -1,8 +1,0 @@
-.news-items {
-    @media (min-width: $screen-sm-min) {
-        @include make-uniform-columns(3);
-    }
-    @media (min-width: $screen-lg-min) {
-        @include make-custom-columns(9, 2, 3);
-    }
-}

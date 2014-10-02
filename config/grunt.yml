@@ -24,7 +24,7 @@ config:
               - web/css
               - web/css/site
               - web/vendor
-              - web/vendor/bootstrap-sass-official/vendor/assets/stylesheets/bootstrap
+              - web/vendor/bootstrap-sass-official/assets/stylesheets
               - web/vendor/bourbon/dist
             app:
                 src:

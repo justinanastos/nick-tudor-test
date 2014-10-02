@@ -1,0 +1,55 @@
+.carousel {
+    $button-padding: 10px;
+
+    %vertical-center {
+        @include transform(translateY(-50%));
+        position: absolute;
+        top: 50%;
+    }
+
+    .next-button {
+        @extend %vertical-center;
+
+        right: $button-padding;
+    }
+
+    .back-button {
+        @extend %vertical-center;
+
+        left: $button-padding;
+    }
+
+    .carousel-block {
+
+        .block-title {
+            @include padding(10px null);
+            @include position(absolute, 0 0 null);
+            background-color: rgba(255, 255, 255, 0.7);
+            text-align: center;
+        }
+
+        .block-images {
+            @include size(100%);
+            display: table;
+            table-layout: fixed;
+        }
+
+        .block-image-wrap {
+            display: table-cell;
+            width: 100%;
+        }
+
+        .block-image {
+            @include size(100%);
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            height: 0;
+
+            // Padding-top is relative to width when it's a percentage. This
+            // will force the div to be a 4:3 aspect ratio, regardless of
+            // it's width.
+            padding-top: 75%;
+        }
+    }
+}

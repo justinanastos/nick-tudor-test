@@ -1,0 +1,8 @@
+<div class="block-title">{{ title }}</div class="block-title">
+<div class="block-images">
+    {{#each images}}
+        <div class="block-image-wrap">
+            <div class="block-image" style="background-image: url('{{ this }}');"></div>
+        </div>
+    {{/each}}
+</div>

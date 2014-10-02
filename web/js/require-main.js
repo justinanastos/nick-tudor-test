@@ -18,6 +18,7 @@
             facebook: '../vendor/facebook/index',
             fastclick: '../vendor/fastclick/lib/fastclick',
             Handlebars: '../vendor/handlebars/handlebars',
+            'handlebars.partialsWithParameters': '../vendor/handlebars-partials-with-parameters/lib/handlebars.partialsWithParameters',
             hbars: '../vendor/requirejs-handlebars/hbars',
             jquery: '../vendor/jquery/dist/jquery',
             marionette: '../vendor/backbone.marionette/lib/core/backbone.marionette',

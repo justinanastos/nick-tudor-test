@@ -1,45 +1,94 @@
 define([
     'app',
-    'apps/example/show/example_show_view'
+    'apps/example/show/example_show_view',
+
+    'entities/carousel'
 ], function(App, View) {
     App.module('ExampleApp.Show', function(ExampleApp, App, Backbone, Marionette, $, _) {
 
         ExampleApp.Controller = Marionette.Controller.extend({
             initialize: function() {
-                this.layout = new View.Layout();
 
-                this.listenTo(this.layout, 'show', this.showItemView);
+                // Get the carousel and save it to the controller instance
+                this.carouselData = App.request('get:carousel:entity');
 
+                // Create the view model and bind it's events.
+                this.viewModel = new Backbone.Model({
+                    page: 0,
+                    carouselData: this.carouselData
+                });
+                this.listenTo(this.viewModel, 'change:page', this.onChangePage);
+
+                this.showLayout();
+            },
+
+            showLayout: function() {
+                // Create the new layout
+                this.layout = new View.Layout({model: this.viewModel});
+
+                // Listen for it's show event
+                this.listenTo(this.layout, 'show', this.onLayoutShow);
+
+                // Listen for the `next` and `back` events from the layout.
+                this.listenTo(this.layout, 'back', function() {
+                    this.changePage(-1);
+                });
+                this.listenTo(this.layout, 'next', function() {
+                    this.changePage(1);
+                });
+
+                // Show the layout, passing it the viewModel.
                 this.show(this.layout, {
-                    loading: true,
-                    entities: this.createDummyModel()
+                    model: this.carouselData
                 });
             },
 
-            // This is a dummy function that should not be included in a
-            // real application. It will simulate a fetch request on a model
-            // to force the loading view to work.
-            createDummyModel: function() {
-                var SIMULATED_FETCH_DELAY = 500;
-                var deferred = $.Deferred();
-                var model = new Backbone.Model();
+            changePage: function(delta) {
+                var blockCount = this.carouselData.get('blocks').length;
+                var page = this.viewModel.get('page');
 
-                // Assign interal variable `_fetch`. This is done
-                // automatically for real calls to `fetch` inside of
-                // `marionette.enhancedController`.
-                model._fetch = deferred.promise();
+                // Change the page by `delta`.
+                page += delta;
 
-                // Resolve the deferred after 500ms. This will let you see
-                // the loading spinner.
-                _.delay(deferred.resolve, SIMULATED_FETCH_DELAY);
+                if (page < 0) {
+                    // If `page` is negative, then we overflowed. Set back
+                    // to 0.
+                    page = 0;
+                } else if (page >= blockCount) {
+                    // If the `page` is >= `blockCount`, then it will try to
+                    // read past the end of the array. Set page back to the
+                    // array length (0 indexed, so `-1`).
+                    page = blockCount - 1;
+                }
 
-                return model;
+                // Set the `page` value with the value we calculated. If we
+                // overflowed and had to correct the value, this will be
+                // setting the value to what it already was, so it won't
+                // fire a change event.
+                this.viewModel.set('page', page);
             },
 
-            showItemView: function() {
-                var view = new View.Item();
+            onLayoutShow: function() {
+                this.showBlock();
+            },
 
-                this.layout.bodyRegion.show(view);
+            onChangePage: function() {
+                this.showBlock();
+            },
+
+            showBlock: function() {
+                var blockData;
+                var blockView;
+                var page = this.viewModel.get('page');
+
+                // Get the currently selected block
+                blockData = this.carouselData.get('blocks').at(page);
+
+                // Instantiate the view
+                blockView = new View.Block({model: blockData});
+
+                // Show the view
+                this.layout.carouselRegion.show(blockView);
             }
         });
     });

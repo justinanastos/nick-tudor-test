@@ -3,19 +3,11 @@ define([
     'marionette',
     'backbone',
     'underscore',
-    'data/data',
     'Handlebars',
 
     // Require.js modules we need included, but don't directly access.
-    'app_extensions/facebook',
-    'app_extensions/handlebars_partials',
+    'handlebars.partialsWithParameters',
     'marionette.babyBird',
-    'marionette.regionChildCloseEvent',
-    'marionette-transitions',
-    'backbone.grouped-collection',
-    'backbone.virtual-collection',
-    'backbone-super',
-    'polyfillLocationOrigin',
     'marionette.enhancedController'
 ], function(Marionette, Backbone, _, data, Handlebars) {
     // Start up a new Marionette Application

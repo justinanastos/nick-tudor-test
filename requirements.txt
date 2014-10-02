@@ -1,6 +1,0 @@
-#-- Development environment pip requirements file
-#   Install via 'pip install -r requirements.txt -t vendor/'
-#   to install dependencies in the vendor/ directory
-Flask==0.10
-flask-debugtoolbar
-flask_cache
