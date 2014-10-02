@@ -15,8 +15,6 @@
             'backbone.grouped-collection': '../vendor/Backbone.GroupedCollection/backbone.grouped-collection',
             'backbone.virtual-collection': '../vendor/Backbone.VirtualCollection/backbone.virtual-collection',
             'backbone.wreqr': '../vendor/backbone.wreqr/lib/backbone.wreqr',
-            facebook: '../vendor/facebook/index',
-            fastclick: '../vendor/fastclick/lib/fastclick',
             Handlebars: '../vendor/handlebars/handlebars',
             'handlebars.partialsWithParameters': '../vendor/handlebars-partials-with-parameters/lib/handlebars.partialsWithParameters',
             hbars: '../vendor/requirejs-handlebars/hbars',
@@ -24,33 +22,16 @@
             marionette: '../vendor/backbone.marionette/lib/core/backbone.marionette',
             'marionette.babyBird': '../vendor/marionette.babyBird/lib/marionette.babyBird',
             'marionette.enhancedController': '../vendor/marionette.enhancedController/lib/marionette.enhancedController',
-            'marionette.regionChildCloseEvent': '../vendor/marionette.regionChildCloseEvent/lib/marionette.regionChildCloseEvent',
-            'marionette-transitions': '../vendor/marionette-transitions/marionette-transitions',
-            modernizr: '../vendor/modernizr/modernizr',
-            polyfillLocationOrigin: '../vendor/polyfillLocationOrigin/lib/polyfillLocationOrigin',
             text: '../vendor/requirejs-text/text',
-            twitter: '../vendor/twitter/index',
             underscore: '../vendor/underscore/underscore',
             'underscore.string': '../vendor/underscore.string/lib/underscore.string'
         },
         shim: {
             'backbone-computedfields': ['backbone'],
-            facebook: {
-                exports: 'FB'
-            },
-            ga: {
-                exports: 'ga'
-            },
             Handlebars: {
                 exports: 'Handlebars'
             },
-            hbars: ['text', 'Handlebars'],
-            modernizr: {
-                exports: 'Modernizr'
-            },
-            twitter: {
-                exports: 'twttr'
-            }
+            hbars: ['text', 'Handlebars']
         },
         hbars: {
             extension: '.hbs'
