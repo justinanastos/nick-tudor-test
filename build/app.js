@@ -28,9 +28,7 @@ define([
             'apps/example/example_app'
         ], function() {
             if (Backbone.history) {
-                Backbone.history.start({
-                    pushState: true
-                });
+                Backbone.history.start();
             }
 
             // Start all apps that were not automatically started. Do this
