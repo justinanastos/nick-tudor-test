@@ -1,0 +1,23 @@
+{
+  "name": "backbone-computedfields",
+  "version": "0.0.7",
+  "main": "lib/backbone.computedfields.js",
+  "ignore": [
+    "test",
+    "node_modules"
+  ],
+  "dependencies": {
+    "underscore": ">=1.5.0",
+    "backbone": ">=0.1.0"
+  },
+  "homepage": "https://github.com/alexanderbeletsky/backbone-computedfields",
+  "_release": "0.0.7",
+  "_resolution": {
+    "type": "version",
+    "tag": "v0.0.7",
+    "commit": "4f13b09a7f8e066bac6af597d51d57a8f33f1332"
+  },
+  "_source": "git://github.com/alexanderbeletsky/backbone-computedfields.git",
+  "_target": "~0.0.7",
+  "_originalSource": "backbone-computedfields"
+}

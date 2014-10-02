@@ -1,0 +1,14 @@
+{
+  "name": "marionette.regionChildCloseEvent",
+  "homepage": "https://github.com/UseAllFive/marionette.regionChildCloseEvent",
+  "version": "0.0.4",
+  "_release": "0.0.4",
+  "_resolution": {
+    "type": "version",
+    "tag": "v0.0.4",
+    "commit": "71f82790c275a9fef7aedc00c84e8b98ab083f79"
+  },
+  "_source": "git://github.com/UseAllFive/marionette.regionChildCloseEvent.git",
+  "_target": "~0.0.4",
+  "_originalSource": "marionette.regionChildCloseEvent"
+}

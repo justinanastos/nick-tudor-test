@@ -1,0 +1,13 @@
+{
+  "name": "Backbone.GroupedCollection",
+  "homepage": "https://github.com/UseAllFive/Backbone.GroupedCollection",
+  "_release": "945314995f",
+  "_resolution": {
+    "type": "branch",
+    "branch": "master",
+    "commit": "945314995ff79d31c19647fbdf643f2b2d8fe195"
+  },
+  "_source": "git://github.com/UseAllFive/Backbone.GroupedCollection.git",
+  "_target": "master",
+  "_originalSource": "UseAllFive/Backbone.GroupedCollection"
+}

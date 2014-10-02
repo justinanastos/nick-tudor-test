@@ -1,0 +1,33 @@
+{
+  "name": "marionette.babyBird",
+  "version": "0.4.0",
+  "description": "Recursively run toJSON on deeply nested models/collections for Marionette views to provide a plain JavaScript object to templates.",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/UseAllFive/marionette.babyBird.git"
+  },
+  "author": "Justin Anastos <janastos@useallfive.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/UseAllFive/marionette.babyBird/issues"
+  },
+  "homepage": "https://github.com/UseAllFive/marionette.babyBird",
+  "devDependencies": {
+    "grunt": "^0.4.5",
+    "grunt-bower-release": "0.0.5",
+    "grunt-bump": "0.0.14",
+    "grunt-contrib-clean": "^0.5.0",
+    "grunt-contrib-jshint": "^0.10.0",
+    "grunt-contrib-requirejs": "^0.4.4",
+    "grunt-contrib-uglify": "^0.5.0",
+    "grunt-contrib-watch": "^0.6.1",
+    "grunt-groc": "^0.4.5",
+    "grunt-jscs-checker": "^0.6.0",
+    "grunt-prompt": "^1.1.0",
+    "jshint": "^2.5.1",
+    "matchdep": "^0.3.0",
+    "semver": "^2.3.1",
+    "ua5-frontend-standards": "0.0.4",
+    "underscore.string": "^2.3.3"
+  }
+}

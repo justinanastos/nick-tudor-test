@@ -1,0 +1,31 @@
+{
+  "name": "backbone-computedfields",
+  "description": "Computed fields for Backbone models",
+  "keywords": [
+    "Backbone",
+    "model",
+    "computed",
+    "field"
+  ],
+  "repository": "git://github.com/alexanderbeletsky/backbone.computedfields.git",
+  "author": "Alexander Beletsky <https://github.com/alexanderbeletsky>",
+  "contributors": "Listed at <https://github.com/alexanderbeletsky/backbone.computedfields/contributors>",
+  "dependencies": {
+    "underscore": "~1.5.2",
+    "backbone": "~1.1.0"
+  },
+  "scripts": {
+    "test": "grunt mocha"
+  },
+  "lib": "./lib",
+  "main": "/lib/backbone.computedfields.js",
+  "version": "0.0.7",
+  "devDependencies": {
+    "grunt": "0.4.0",
+    "grunt-contrib-jshint": "~0.3.0",
+    "grunt-contrib-uglify": "~0.2.0",
+    "grunt-mocha": "~0.2.3",
+    "grunt-rigger": "~0.4.0",
+    "grunt-contrib-concat": "~0.1.3"
+  }
+}

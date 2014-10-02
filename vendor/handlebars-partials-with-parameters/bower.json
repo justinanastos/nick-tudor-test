@@ -1,0 +1,35 @@
+{
+  "name": "handlebars-partials-with-parameters",
+  "version": "1.0.5",
+  "homepage": "https://github.com/UseAllFive/handlebars.partialsWithParameters",
+  "authors": [
+    "Justin Anastos <janastos@useallfive.com>"
+  ],
+  "description": "Allow named parameters to be passed to handlebars partials.",
+  "main": "lib/handlebars.partialsWithParameters.js",
+  "moduleType": [
+    "amd"
+  ],
+  "repository": {
+    "type" : "git",
+    "url": "git://github.com/UseAllFive/handlebars.partialsWithParameters.git"
+  },
+  "keywords": [
+    "marionette",
+    "controller",
+    "region"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {},
+  "devDependencies": {
+    "handlebars": "~1.3.0",
+    "underscore": "~1.6.0"
+  }
+}

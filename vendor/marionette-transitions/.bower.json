@@ -1,0 +1,14 @@
+{
+  "name": "marionette-transitions",
+  "homepage": "https://github.com/UseAllFive/Marionette-transitions",
+  "version": "0.0.11",
+  "_release": "0.0.11",
+  "_resolution": {
+    "type": "version",
+    "tag": "v0.0.11",
+    "commit": "1ff3d9b76bd5b2b445c9914a0d1d3458ee67de02"
+  },
+  "_source": "git://github.com/UseAllFive/Marionette-transitions.git",
+  "_target": "0.0.11",
+  "_originalSource": "marionette-transitions"
+}

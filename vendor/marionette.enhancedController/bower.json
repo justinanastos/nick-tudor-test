@@ -1,0 +1,34 @@
+{
+  "name": "marionette.enhancedController",
+  "version": "1.1.8",
+  "homepage": "https://github.com/UseAllFive/marionette.enhancedController",
+  "authors": [
+    "Justin Anastos <janastos@useallfive.com>"
+  ],
+  "description": "Extend Marionette.Controller to allow for region management and debugging.",
+  "main": "lib/marionette.enhancedController.js",
+  "moduleType": [
+    "amd"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/UseAllFive/marionette.enhancedController.git"
+  },
+  "keywords": [
+    "marionette",
+    "controller",
+    "region"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {},
+  "devDependencies": {
+    "spinjs": "~2.0.1"
+  }
+}

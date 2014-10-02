@@ -1,0 +1,30 @@
+{
+  "name": "backbone-virtual-collection",
+  "description": "Use Backbone.Marionette CollectionViews on a subset of a Backbone collection",
+  "version": "0.5.0",
+  "main": "backbone.virtual-collection.js",
+  "keywords": [
+    "backbone",
+    "marrionette",
+    "ender",
+    "teambox"
+  ],
+  "homepage": "https://github.com/p3drosola/Backbone.VirtualCollection",
+  "authors": [
+    "Pedro Solá<p3dro.sola@gmail.com>"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/p3drosola/Backbone.VirtualCollection.git"
+  },
+  "dependencies": {
+    "backbone": "*",
+    "underscore": "*",
+    "mocha": "*",
+    "sinon": "*"
+  },
+  "ender": "./backbone.virtual-collection.js",
+  "scripts": {
+    "test": "mocha -R spec"
+  }
+}

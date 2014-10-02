@@ -1,0 +1,13 @@
+{
+  "name": "facebook",
+  "_cacheHeaders": {
+    "Content-MD5": "KMKHsKOry/Rk0Sb57khcNA==",
+    "ETag": "\"4ab5009538489d0529f18ea2d3457e97\"",
+    "Content-Type": "application/x-javascript; charset=utf-8"
+  },
+  "_release": "e-tag:4ab500953",
+  "main": "index.js",
+  "_source": "https://connect.facebook.net/en_US/sdk.js",
+  "_target": "*",
+  "_originalSource": "https://connect.facebook.net/en_US/sdk.js"
+}

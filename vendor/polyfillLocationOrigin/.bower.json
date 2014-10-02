@@ -1,0 +1,14 @@
+{
+  "name": "polyfillLocationOrigin",
+  "homepage": "https://github.com/UseAllFive/polyfillLocationOrigin",
+  "version": "0.1.1",
+  "_release": "0.1.1",
+  "_resolution": {
+    "type": "version",
+    "tag": "v0.1.1",
+    "commit": "9d18e02227f0566a76be6f43f5a56c35acd4b18d"
+  },
+  "_source": "git://github.com/UseAllFive/polyfillLocationOrigin.git",
+  "_target": "~0.1.1",
+  "_originalSource": "polyfillLocationOrigin"
+}
