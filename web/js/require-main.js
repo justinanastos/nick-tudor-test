@@ -20,7 +20,6 @@
             hbars: '../vendor/requirejs-handlebars/hbars',
             jquery: '../vendor/jquery/dist/jquery',
             marionette: '../vendor/backbone.marionette/lib/core/backbone.marionette',
-            'marionette.babyBird': '../vendor/marionette.babyBird/lib/marionette.babyBird',
             'marionette.enhancedController': '../vendor/marionette.enhancedController/lib/marionette.enhancedController',
             text: '../vendor/requirejs-text/text',
             underscore: '../vendor/underscore/underscore',

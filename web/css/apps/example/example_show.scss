@@ -1,55 +1,93 @@
-.carousel {
-    $button-padding: 10px;
+$artwork-margin: 0;
+$button-margin: 10px;
+$button-width: 60px;
+$image-size: 100px;
+$images-per-page: 4;
+$images: 20;
+$button-height: 33px;
+
+.top-song-list {
+
+    @include position(relative);
+
+    height: $image-size + $button-height + $button-margin;
+    width: $button-width * 2 + $button-margin * 4 + $image-size * $images-per-page;
 
     %vertical-center {
         @include transform(translateY(-50%));
-        position: absolute;
-        top: 50%;
+        @include position(absolute, $image-size / 2 null null);
+    }
+
+    %horizontal-center {
+        @include margin(null auto);
+    }
+
+    %buttons {
+        @extend %vertical-center;
+
+        width: $button-width;
     }
 
     .next-button {
-        @extend %vertical-center;
+        @extend %buttons;
 
-        right: $button-padding;
+        right: $button-margin;
     }
 
     .back-button {
-        @extend %vertical-center;
+        @extend %buttons;
 
-        left: $button-padding;
+        left: $button-margin;
     }
 
-    .carousel-block {
+    .randomize-button {
+        @include position(absolute, $image-size + $button-margin null null 50%);
+        @include transform(translateX(-50%));
+    }
 
-        .block-title {
-            @include padding(10px null);
-            @include position(absolute, 0 0 null);
-            background-color: rgba(255, 255, 255, 0.7);
-            text-align: center;
+    .carousel-images-wrap {
+        @extend %horizontal-center;
+        @include size($image-size * $images-per-page $image-size);
+        overflow: hidden;
+    }
+
+    ul {
+        @extend %horizontal-center;
+
+        @include row();
+        @include transition(1s all);
+
+        height: $image-size;
+        list-style: none;
+        padding-left: 0;
+        width: $image-size * $images;
+
+        @for $i from 0 through 10 {
+            &[data-page="#{$i}"] {
+                @include transform(translateX($i * -$images-per-page * $image-size));
+            }
+        }
+    }
+
+    .song {
+        @include margin(null $artwork-margin);
+
+        display: inline-block;
+        padding-left: 0;
+
+        &:first-child {
+            margin-left: 0;
         }
 
-        .block-images {
-            @include size(100%);
-            display: table;
-            table-layout: fixed;
+        &:last-child {
+            margin-right: 0;
         }
 
-        .block-image-wrap {
-            display: table-cell;
-            width: 100%;
-        }
-
-        .block-image {
-            @include size(100%);
+        .artwork {
+            @include size($image-size);
             background-position: center;
             background-repeat: no-repeat;
             background-size: cover;
-            height: 0;
-
-            // Padding-top is relative to width when it's a percentage. This
-            // will force the div to be a 4:3 aspect ratio, regardless of
-            // it's width.
-            padding-top: 75%;
         }
     }
 }

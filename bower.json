@@ -17,8 +17,8 @@
     "requirejs-text": "~2.0.12",
     "underscore": "~1.6.0",
     "underscore.string": "~2.3.3",
-    "marionette.babyBird": "^0.4.0",
     "marionette.enhancedController": "^1.0.3",
-    "handlebars-partials-with-parameters": "justinanastos/handlebars.partialsWithParameters#~1.0.5"
+    "handlebars-partials-with-parameters": "justinanastos/handlebars.partialsWithParameters#~1.0.5",
+    "neat": "~1.6.0"
   }
 }

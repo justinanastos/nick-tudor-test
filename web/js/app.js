@@ -7,7 +7,6 @@ define([
 
     // Require.js modules we need included, but don't directly access.
     'handlebars.partialsWithParameters',
-    'marionette.babyBird',
     'marionette.enhancedController'
 ], function(Marionette, Backbone, _, data, Handlebars) {
     // Start up a new Marionette Application
@@ -57,11 +56,6 @@ define([
         Handlebars.registerHelper('log', function(context) {
             return window.console.log(context);
         });
-    });
-
-    // Returning data/data.js when requested
-    App.reqres.setHandler('data', function() {
-        return data;
     });
 
     // Return the application instance.

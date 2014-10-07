@@ -26,6 +26,7 @@ config:
               - web/vendor
               - web/vendor/bootstrap-sass-official/assets/stylesheets
               - web/vendor/bourbon/dist
+              - web/vendor/neat/app/assets/stylesheets
             app:
                 src:
                   - web/css/application.scss
